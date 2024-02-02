@@ -115,7 +115,7 @@ static void etm_clr_pwrup(struct etm_drvdata *drvdata)
  *
  * Basically the same as @coresight_timeout except for the register access
  * method where we have to account for CP14 configurations.
-
+ *
  * Return: 0 as soon as the bit has taken the desired state or -EAGAIN if
  * TIMEOUT_US has elapsed, which ever happens first.
  */
@@ -1000,7 +1000,7 @@ static const struct amba_id etm_ids[] = {
 	CS_AMBA_ID_DATA(0x000bb95f, "PTM 1.1"),
 	/* PTM 1.1 Qualcomm */
 	CS_AMBA_ID_DATA(0x000b006f, "PTM 1.1"),
-	{ 0, 0},
+	{ 0, 0, NULL},
 };
 
 MODULE_DEVICE_TABLE(amba, etm_ids);
